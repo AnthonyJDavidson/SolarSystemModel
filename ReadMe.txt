@@ -1,5 +1,8 @@
 READ.ME
 
+Currently Only works in firefox
+
+
 The ratio of the planet's radius' is correct
 The ratio of the orbits are also correct
 

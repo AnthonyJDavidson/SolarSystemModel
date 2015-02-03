@@ -2,248 +2,554 @@
 <html lang="en">
 	<head>
 		<title>Solar System</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 
 	<body>
-		<!-- This id will contain the threeJs scene !-->
+		<!-- This id will contain the threeJs scene -->
 		<div id="sceneContainer"></div>
+
+
+		<div class ="planetInfo">
+		
+			<!-- Most info of the sun taken from http://nineplanets.org/sol.html
+			(or where specified)
+			-->
+			<!-- Sun -->
+			<div id ="sun" class="info">
+				<span id="titlePlanet">Sun</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">0.382</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">1,390,000</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">0.055</th>
+						</tr>
+						<!-- Rotations taken from
+							http://www.enchantedlearning.com/subjects/astronomy/sun/rotation.shtml
+						-->
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period At Equator (Earth Days)</th>
+							<th id ="title">25.6</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period At 60degree Latitude (Earth Days)</th>
+							<th id ="title">30.9</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period At Pole (Earth Days)</th>
+							<th id ="title">36</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">5526.85</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Core Temperature(C)</th>
+							<th id ="title">15,600,000</th>
+						</tr>
+						<!-- Gravity taken from  
+							http://www.smartconversion.com/otherInfo/gravity_of_planets_and_the_sun.aspx
+						-->
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">28</th>
+						</tr>
+
+					</tbody>	
+				</table>
+			</div>
+
+			<!-- Info of planets 
+				Taken from http://www.windows2universe.org/our_solar_system/planets_table.html
+			-->
+			<!-- Mercury -->
+			<div id ="mercury" class="info">
+				<span id="titlePlanet">Mercury</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">0.382</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">4,878</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">0.055</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean distance from the sun (AU)</th>
+							<th id ="title">0.39</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Orbital Period (Earth Years)</th>
+							<th id ="title">0.24</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Orbital Velocity (km/sec)</th>
+							<th id ="title">47.89</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period (Earth Days)</th>
+							<th id ="title">58.65</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">-180 to 430</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">0.38</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Density (Water = 1)</th>
+							<th id ="title">5.43</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Number Of Moons</th>
+							<th id ="title">0</th>
+						</tr>
+					</tbody>	
+				</table>
+			</div>
+
+			<!-- Venus -->
+			<div id ="venus" class="info">
+				<span id="titlePlanet">Venus</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">0.949</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">12,104</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">0.815</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean distance from the sun (AU)</th>
+							<th id ="title">0.72</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Orbital Period (Earth Years)</th>
+							<th id ="title">0.62</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Orbital Velocity (km/sec)</th>
+							<th id ="title">35.03</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period (Earth Days)</th>
+							<th id ="title">-243*</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">465</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">0.9</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Density (Water = 1)</th>
+							<th id ="title">5.25</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Number Of Moons</th>
+							<th id ="title">0</th>
+						</tr>
+					</tbody>	
+				</table>
+				<span>*Retrograde rotation</span>
+			</div>
+
+			<!-- Earth -->
+			<div id ="earth" class="info">
+				<span id="titlePlanet">Earth</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">1</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">12,756</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">1</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean distance from the sun (AU)</th>
+							<th id ="title">1</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Orbital Period (Earth Years)</th>
+							<th id ="title">1</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Orbital Velocity (km/sec)</th>
+							<th id ="title">29.79</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period (Earth Days)</th>
+							<th id ="title">1</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">-89 to 58</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">1</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Density (Water = 1)</th>
+							<th id ="title">5.52</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Number Of Moons</th>
+							<th id ="title">1</th>
+						</tr>
+					</tbody>	
+				</table>
+			</div>
+
+			<!-- Mars -->
+			<div id ="mars" class="info">
+				<span id="titlePlanet">Mars</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">0.532</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">6,787</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">0.107</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean distance from the sun (AU)</th>
+							<th id ="title">1.52</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Orbital Period (Earth Years)</th>
+							<th id ="title">1.88</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Orbital Velocity (km/sec)</th>
+							<th id ="title">24.13</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period (Earth Days)</th>
+							<th id ="title">1.03</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">-82 to 0</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">0.38</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Density (Water = 1)</th>
+							<th id ="title">3.93</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Number Of Moons</th>
+							<th id ="title">2</th>
+						</tr>
+					</tbody>	
+				</table>
+			</div>
+
+			<!-- Jupiter -->
+			<div id ="jupiter" class="info">
+				<span id="titlePlanet">Jupiter</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">11.209</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">142,800</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">318</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean distance from the sun (AU)</th>
+							<th id ="title">5.2</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Orbital Period (Earth Years)</th>
+							<th id ="title">11.86</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Orbital Velocity (km/sec)</th>
+							<th id ="title">13.06</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period (Earth Days)</th>
+							<th id ="title">0.41</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">-150</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">2.64</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Density (Water = 1)</th>
+							<th id ="title">1.33</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Number Of Moons</th>
+							<th id ="title">63</th>
+						</tr>
+					</tbody>	
+				</table>
+			</div>
+
+			<!-- Saturn -->
+			<div id ="saturn" class="info">
+				<span id="titlePlanet">Saturn</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">9.44</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">120,000</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">95</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean distance from the sun (AU)</th>
+							<th id ="title">9.54</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Orbital Period (Earth Years)</th>
+							<th id ="title">29.46</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Orbital Velocity (km/sec)</th>
+							<th id ="title">9.64</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period (Earth Days)</th>
+							<th id ="title">0.44</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">-170</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">0.93</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Density (Water = 1)</th>
+							<th id ="title">0.71</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Number Of Moons</th>
+							<th id ="title">62</th>
+						</tr>
+					</tbody>	
+				</table>
+			</div>
+
+			<!-- Uranus -->
+			<div id ="uranus" class="info">
+				<span id="titlePlanet">Uranus</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">4.007</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">51,118</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">15</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean distance from the sun (AU)</th>
+							<th id ="title">19.18</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Orbital Period (Earth Years)</th>
+							<th id ="title">84.01</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Orbital Velocity (km/sec)</th>
+							<th id ="title">6.81</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period (Earth Days)</th>
+							<th id ="title">-0.72*</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">-200</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">0.89</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Density (Water = 1)</th>
+							<th id ="title">1.24</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Number Of Moons</th>
+							<th id ="title">27</th>
+						</tr>
+					</tbody>	
+				</table>
+				<span>*Retrograde rotation</span>
+			</div>
+
+			<!-- Neptune -->
+			<div id ="neptune" class="info">
+				<span id="titlePlanet">Neptune</span>
+				<br />
+				<table border="2" cellpadding="5" cellspacing="0">
+					<tbody>
+						<tr align="center" valign="top">
+							<th id ="title">Info</th>
+							<th id ="title">Stats</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (Earth = 1)</th>
+							<th id ="title">3.883</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Diameter (km)</th>
+							<th id ="title">49,528</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mass (Earth = 1)</th>
+							<th id ="title">17</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean distance from the sun (AU)</th>
+							<th id ="title">30.06</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Orbital Period (Earth Years)</th>
+							<th id ="title">164.8</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Orbital Velocity (km/sec)</th>
+							<th id ="title">5.43</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Rotation Period (Earth Days)</th>
+							<th id ="title">0.72</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Surface Temperature(C)</th>
+							<th id ="title">-210</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Gravity At Equator (Earth = 1)</th>
+							<th id ="title">1.12</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Mean Density (Water = 1)</th>
+							<th id ="title">1.67</th>
+						</tr>
+						<tr align="center" valign="top">
+							<th id ="title">Number Of Moons</th>
+							<th id ="title">13</th>
+						</tr>
+					</tbody>	
+				</table>
+			</div>
+			
+
+		</div>
+
+
+
 		<script src="build/three.min.js"></script>
-
-		<script src="js/controls/OrbitControls.js"></script>
-
+		<script src="js/OrbitControls.js"></script>
 		<script src="js/Detector.js"></script>
-		<script src="js/libs/stats.min.js"></script>
-
-		<script> /* This is my personal work ( the above are the relevant libraries) */
-
-			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-
-			var sceneContainer, stats;
-			var camera, controls, scene, renderer, projector;
-			var planets = [];
-
-			init();
-			render();
-
-			function init() {
-
-				projector = new THREE.Projector();
-				// PerspectiveCamera( fov, aspect, near, far )
-				// Foz = 60, aspect = screen aspect. near = 1 , far - 80k (largest radius is Neptune at 30k and diameter will be 60k)
-				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 200000 );
-				camera.position = new THREE.Vector3( 0, 0, 30001);
-
-				//Declare camera Controls (three OrbitControls)
-				controls = new THREE.OrbitControls( camera );
-				controls.addEventListener( 'change', render );
-
-				scene = new THREE.Scene();
-
-
-
-				/*
-				__________.__                        __          
-				\______   \  | _____    ____   _____/  |_  ______
-				 |     ___/  | \__  \  /    \_/ __ \   __\/  ___/
-				 |    |   |  |__/ __ \|   |  \  ___/|  |  \___ \ 
-				 |____|   |____(____  /___|  /\___  >__| /____  >
-				                    \/     \/     \/          \/ 
-				*/
-				// sphereGeometry arguments = (radius,segmentsWidth,segmentsHeight)
-				//segments width and heighth refer to how perfect the circle is (higher value = more rendering power required)
-
-				//This is not a metrically accurate sun as to do so the solar system would be mostly empty space (as in real world)
-				var sunGeo = new THREE.SphereGeometry( 100, 24,24 );
-				//Radius in relation to earth's radius = 10
-				var mercuryGeo = new THREE.SphereGeometry( 3.8, 24, 24 );
-				var venusGeo = new THREE.SphereGeometry( 9.5, 24, 24 );
-				var earthGeo = new THREE.SphereGeometry( 10, 24, 24 );
-				var marsGeo = new THREE.SphereGeometry( 5.3, 24, 24 );
-				var jupiterGeo = new THREE.SphereGeometry( 110, 24, 24 );
-				var saturnGeo = new THREE.SphereGeometry( 94, 24, 24 );
-				var uranusGeo = new THREE.SphereGeometry( 44, 24, 24 );
-				var neptuneGeo = new THREE.SphereGeometry( 39, 24, 24 );
-
-				var sunMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/sunmap')});
-				var mercuryMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/mercurymap.jpeg')});
-				var venusMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/venusmap.jpeg')});
-				var earthMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/earthmap1k.jpeg')});
-				var marsMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/mars_1k_color.jpeg')});
-				var jupiterMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/jupitermap.jpeg')});
-				var saturnMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/saturnmap.jpeg')});
-				var uranusMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/uranusmap.jpeg')});
-				var neptuneMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/neptunemap.jpeg')});
-				/*
-				var sunMaterial = new THREE.MeshNormalMaterial();
-				var mercuryMaterial= new THREE.MeshLambertMaterial( { color: 0xDB1A1A} ) ;
-				var venusMaterial = new THREE.MeshLambertMaterial( { color: 0x1A4BDB} ) ;
-				var earthMaterial = new THREE.MeshNormalMaterial();
-				var marsMaterial = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending } ) ;
-				var jupiterMaterial = new THREE.MeshNormalMaterial();
-				var uranusMaterial = new THREE.MeshNormalMaterial();
-				//materials.push( new THREE.MeshBasicMaterial( { color: 0xff0000, blending: THREE.SubtractiveBlending } ) );
-
-				var saturnMaterial= new THREE.MeshLambertMaterial( { color: 0xdddddd, shading: THREE.SmoothShading } ) ;
-				var neptuneMaterial = new THREE.MeshPhongMaterial( { ambient: 0x030303, color: 0xdddddd, specular: 0x009900, shininess: 30, shading: THREE.SmoothShading, transparent: true } ) ;
-				*/
-
-
-				var theSun = new THREE.Mesh(sunGeo, sunMaterial);
-				theSun.position = new THREE.Vector3( 0, 0, 0 );
-				planets.push(theSun);
-				var mercury = new THREE.Mesh(mercuryGeo, mercuryMaterial);
-				mercury.position = new THREE.Vector3( 390, 0, 0 );
-				planets.push(mercury);
-				var venus = new THREE.Mesh(venusGeo, venusMaterial);
-				venus.position = new THREE.Vector3( 720, 0, 0 );
-				planets.push(venus);
-				var earth = new THREE.Mesh(earthGeo, earthMaterial);
-				earth.position = new THREE.Vector3( 1000, 0, 0 );
-				planets.push(earth);
-				var mars = new THREE.Mesh(marsGeo, marsMaterial);
-				mars.position = new THREE.Vector3( 1500, 0, 0 );
-				planets.push(mars);
-				var jupiter = new THREE.Mesh(jupiterGeo, jupiterMaterial);
-				jupiter.position = new THREE.Vector3( 5200, 0, 0 );
-				planets.push(jupiter);
-				var saturn = new THREE.Mesh(saturnGeo, saturnMaterial);
-				saturn.position = new THREE.Vector3( 9500, 0, 0 );
-				planets.push(saturn);
-				var uranus = new THREE.Mesh(uranusGeo, uranusMaterial);
-				uranus.position = new THREE.Vector3( 19000, 0, 0 );
-				planets.push(uranus);
-				var neptune = new THREE.Mesh(neptuneGeo, neptuneMaterial);
-				neptune.position = new THREE.Vector3( 30000, 0, 0 );
-				planets.push(neptune);
-
-
-				//Names to be stored for later use
-				theSun.nameOfPlanet = 'theSun';
-				mercury.nameOfPlanet = 'mercury';
-				venus.nameOfPlanet = 'venus';
-				earth.nameOfPlanet = 'earth';
-				mars.nameOfPlanet = 'mars';
-				jupiter.nameOfPlanet = 'jupiter';
-				saturn.nameOfPlanet = 'saturn';
-				uranus.nameOfPlanet = 'uranus';
-				neptune.nameOfPlanet = 'neptune';
-
-
-				//Add planets to the scene
-				scene.add(theSun);
-				scene.add( mercury );
-				scene.add( venus );
-				scene.add( earth );
-				scene.add( mars );
-				scene.add( jupiter );
-				scene.add( saturn );
-				scene.add( uranus );
-				scene.add( neptune );
-
-				/*
-				________       ___.   .__  __          
-				\_____  \______\_ |__ |__|/  |_  ______
-				 /   |   \_  __ \ __ \|  \   __\/  ___/
-				/    |    \  | \/ \_\ \  ||  |  \___ \ 
-				\_______  /__|  |___  /__||__| /____  >
-   					    \/          \/              \/ 
-   				*/
-
-				//Orbit lines to show orbit
-				var createOrbitLine = function(radius,color){
-					var circleRadius = radius;
-					var circleShape = new THREE.Shape();
-					circleShape.moveTo( 0, circleRadius );
-					circleShape.quadraticCurveTo( circleRadius, circleRadius, circleRadius, 0 );
-					circleShape.quadraticCurveTo( circleRadius, -circleRadius, 0, -circleRadius );
-					circleShape.quadraticCurveTo( -circleRadius, -circleRadius, -circleRadius, 0 );
-					circleShape.quadraticCurveTo( -circleRadius, circleRadius, 0, circleRadius );
-					var points = circleShape.createPointsGeometry();
-					var spacedPoints = circleShape.createSpacedPointsGeometry( 200 );
-					var line = new THREE.Line( points, new THREE.LineBasicMaterial( { color: color, linewidth: 0.01} ) );
-					line.position.set(0,0,0);
-					scene.add(line);
-				};
-
-				createOrbitLine(390, 0xFABF41);
-				createOrbitLine(720, 0xFA8E41);
-				createOrbitLine(1000, 0x3BA7FF);
-				createOrbitLine(1500, 0xFF5533);
-				createOrbitLine(5200, 0xFFC76E);
-				createOrbitLine(9500, 0xFFE2B3);
-				createOrbitLine(19000, 0xCCFEFF);
-				createOrbitLine(30000, 0x00E1FF);
-
-/*				.____    .__       .__     __          
-				|    |   |__| ____ |  |___/  |_  ______
-				|    |   |  |/ ___\|  |  \   __\/  ___/
-				|    |___|  / /_/  >   Y  \  |  \___ \ 
-				|_______ \__\___  /|___|  /__| /____  >
-				        \/ /_____/      \/          \/ */
-
-				// lights
-				
-				var light = new THREE.SpotLight( 0xff0000 );
-				light.position.set( 0, 0, 0 );
-				light.target.position.set( 30000, 0, 0 );
-				scene.add(light);
-
-				light = new THREE.AmbientLight( 0x222222 );
-				scene.add( light );
-
-
-
-
-
-
-
-
-
-				// renderer for the scene (using WebGL)
-				// can be set to true depending on machine
-				renderer = new THREE.WebGLRenderer( { antialias: false } );
-				// size of scene is entrie screen size
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				sceneContainer = document.getElementById( 'sceneContainer' );
-				sceneContainer.appendChild( renderer.domElement );
-				window.addEventListener( 'resize', onWindowResize, false );
-				sceneContainer.addEventListener( 'mousedown', onMouseDown, false );
-
-			}
-			//Make the scenesize dynamic
-			function onWindowResize() {
-				//renderer must always be screen size
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				//Camera Aspect is also the same
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix(); //projections also must be updated
-				render();//Scene must be re rendered when resizing is done
-			}
-
-			//render the scene
-			function render() {
-				renderer.render( scene, camera ); //Scene and camera
-			}
-
-			function onMouseDown( event ) {
-				
-				//here I am creating a raycaster currently for myself to click on objects and get their values
-				// future work may include giving a pop up with basic information about this planet and links to more information
-				event.preventDefault();
-				//creating a vector that essentially points out of the mouse to the scene
-				vector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, - (event.clientY / window.innerHeight) * 2 + 1, 1 );
-				projector.unprojectVector( vector, camera );
-				var raycaster = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
-
-				//Store all objects intersected by the ray
-				var intersects = raycaster.intersectObjects( planets );
-				if(intersects.length >0){
-					console.log(intersects);
-				}
-			}
-
-
-		</script>
+		<script src="js/main.js"></script>
 
 	</body>
 </html>

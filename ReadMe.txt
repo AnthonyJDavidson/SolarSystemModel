@@ -1,5 +1,12 @@
 READ.ME
 
+** Currently Only works in Firefox **
+
+This project was a make-up project for 5 credits during my 
+Third Year of Computer Science and Software Engineering
+
+** info on how/why it looks how it does **
+
 The ratio of the planet's radius' is correct
 The ratio of the orbits are also correct
 
